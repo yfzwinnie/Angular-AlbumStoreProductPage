@@ -7,10 +7,10 @@ export class ProductService {
 
   private _albumUrl = '../assets/album.json'; //creating private class property
 
-  constructor(private _http: Http) { }
+  constructor(private _http: Http) { } //injecting an instance of a http service into the ProductService class.
 
   getAlbum(id: number) {
-    return this._http.get(this._albumUrl).map((response) => response.json());
+    return this._http.get(this._albumUrl).map((response) => response.json()); //we want the response to be json format
   }
 
 }

@@ -1,6 +1,6 @@
 <div class="row description">
   <div class="col-sm-2">
-    <img src="{{albumInfo?.album.coverImage}}" alt="product image" /> <!--each of these keys {{}} maps up to the album.json file returned from the http request within product-descript.componet.ts-->
+    <img src="{{albumInfo?.album.coverImage}}" alt="product image" /> <!--each of these keys {{}} maps up to the album.json file returned from the http request within product-description.component.ts. data might not be returned by the HTTP get right when the template needs that object for rendering, so adding the question mark lets the template know to look for that data and re-render when it is available)-->
   </div>
   <div class="col-sm-6">
     <p class="album-name">{{albumInfo?.album.name}}</p>
