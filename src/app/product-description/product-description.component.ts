@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service'; //import service in order to use it
+import { Album } from '../album';
 
 @Component({
   selector: 'app-product-description',
@@ -8,12 +9,12 @@ import { ProductService } from '../product.service'; //import service in order t
 })
 export class ProductDescriptionComponent implements OnInit {
 
-  albumInfo; //creating an albumInfo property within the class to be used below
+  albumInfo: Album;
 
   constructor(private _productService: ProductService) { }
 
   ngOnInit() {
-    this._productService.getAlbum(1).subscribe(response => this.albumInfo = response)
+    this._productService.getAlbum(1).subscribe(response => this.albumInfo = response) //kicks off the http request and stores the response in the class variable name albumInfo
   }
 
 }
