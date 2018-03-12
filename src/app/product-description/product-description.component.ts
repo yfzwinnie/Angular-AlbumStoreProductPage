@@ -13,7 +13,7 @@ export class ProductDescriptionComponent implements OnInit {
   constructor(private _productService: ProductService) { }
 
   ngOnInit() {
-    this._productService.getAlbum(1).subscribe(response => this.albumInfo = response) //kicks off the http request and stores the response in the class variable name albumInfo
+    this._productService.getAlbum(1).subscribe(response => this.albumInfo = response)
   }
 
 }
